@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Đăng nhập - Oliu Drinks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Modular CSS imports -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/products.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="section">
+    <div class="container auth-container align-center">
+      <h2>Đăng nhập</h2>
+      <form id="login-form" class="auth-form" style="max-width:360px;margin:0 auto;display:block">
+        <input id="login-email" type="email" placeholder="Email" required />
+        <input id="login-password" type="password" placeholder="Mật khẩu" required />
+        <button id="login-submit" class="btn btn-primary btn-full" type="submit">Đăng nhập</button>
+        <p style="margin-top:10px">Chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
+      </form>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/init.js"></script>
+</body>
+</html>

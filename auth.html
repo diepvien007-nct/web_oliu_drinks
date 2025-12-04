@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oliu Drinks - Đăng nhập / Đăng ký</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="promo-bar">
+    <div class="promo-text">
+      ĐĂNG KÝ THÀNH VIÊN ĐỂ NHẬN MÃ GIẢM GIÁ ĐẶC BIỆT TỪ OLIU DRINKS
+    </div>
+  </div>
+
+  <main class="section section-alt">
+    <div class="container auth-wrapper fade-section">
+      <div class="auth-info">
+        <h2>Chào mừng bạn đến với Oliu Drinks</h2>
+        <p>
+          Đăng nhập để theo dõi đơn hàng, lưu lại đồ uống yêu thích và nhận các
+          chương trình ưu đãi riêng cho thành viên.
+        </p>
+        <p>
+          Tài khoản ở đây chỉ dùng ở mức giao diện demo, chưa kết nối với hệ
+          thống đăng nhập thực tế.
+        </p>
+      </div>
+
+      <div class="auth-container">
+        <div class="auth-tabs">
+          <button class="auth-tab-btn active" data-target="login">Đăng nhập</button>
+          <button class="auth-tab-btn" data-target="register">Đăng ký</button>
+        </div>
+
+        <div class="auth-forms">
+          <form id="login-form" class="auth-form active">
+            <h3>Đăng nhập</h3>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Mật khẩu" required />
+            <button type="submit" class="btn btn-primary btn-full">Đăng nhập</button>
+          </form>
+
+          <form id="register-form" class="auth-form">
+            <h3>Đăng ký tài khoản</h3>
+            <input type="text" placeholder="Họ tên" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Mật khẩu" required />
+            <input type="password" placeholder="Nhập lại mật khẩu" required />
+            <button type="submit" class="btn btn-primary btn-full">Đăng ký</button>
+          </form>
+        </div>
+        <p class="auth-note">
+          * Đây là form demo, bạn có thể nối API đăng nhập thật (JWT, session...)
+          khi làm backend.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button id="cart-close" class="cart-close">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng cộng:</span>
+        <span id="cart-total-value">0đ</span>
+      </div>
+      <button id="cart-checkout" class="btn btn-primary btn-full">
+        Thanh toán (demo)
+      </button>
+      <p class="cart-note">
+        * Phần đăng nhập/đăng ký chưa liên kết giỏ hàng – bạn có thể xử lý ở backend.
+      </p>
+    </div>
+  </aside>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/products-ui.js"></script>
+  <script src="assets/js/init.js"></script>
+</body>
+</html>

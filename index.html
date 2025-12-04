@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oliu Drinks - Trang chủ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Modular CSS imports -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/products.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+</head>
+<body>
+  <!-- Header sẽ được JS nạp từ header.html -->
+  <div id="site-header"></div>
+
+  <!-- Thanh ưu đãi chạy -->
+  <div class="promo-bar">
+    <div class="promo-text">
+      ƯU ĐÃI HÈ: GIẢM 20% CHO ĐƠN TỪ 3 LY &nbsp;•&nbsp; FREESHIP BÁN KÍNH 3KM
+      &nbsp;•&nbsp; TẶNG TOPPING TRÂN CHÂU CHO ĐƠN TỪ 50.000đ
+    </div>
+  </div>
+
+  <!-- HERO + SLIDER -->
+  <section class="hero-section">
+    <div class="container hero-inner">
+      <div class="hero-left fade-section">
+        <h1>Giải khát chuẩn vị, tươi mát mỗi ngày</h1>
+        <p>
+          Oliu Drinks mang đến trà sữa, trà trái cây và topping nhà làm
+          với nguyên liệu chọn lọc, pha chế chuẩn vị, phù hợp để bạn mở quán
+          hoặc bán online.
+        </p>
+        <div class="hero-actions">
+          <a href="sanpham.html" class="btn btn-primary">Xem menu</a>
+          <a href="gioithieu.html" class="btn btn-outline">Giới thiệu thương hiệu</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-slider">
+          <!-- Slide 1 -->
+          <div class="hero-slide active">
+            <img
+              src="assets/images/a1.jpg" 
+              alt="Slide 1"
+              class="hero-slide-img"
+            />
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="hero-slide">
+            <img
+              src="assets/images/a2.jpg"
+              alt="Slide 2"
+              class="hero-slide-img"
+            />
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="hero-slide">
+            <img
+              src="assets/images/a3.jpg"
+              alt="Slide 3"
+              class="hero-slide-img"
+            />
+          </div>
+        </div>
+
+        <div class="hero-slider-controls">
+          <button id="slider-prev" class="slider-btn">&#10094;</button>
+          <button id="slider-next" class="slider-btn">&#10095;</button>
+        </div>
+      </div>
+        </div>
+  </section>
+
+  <!-- DANH MỤC CHÍNH -->
+  <section class="section section-alt fade-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Danh mục đồ uống</h2>
+        <p>Chia menu rõ ràng để khách dễ chọn và bạn dễ quản lý.</p>
+      </div>
+      <div class="category-grid">
+        <a href="sanpham.html#tra-sua" class="category-card">
+          <h3>Trà sữa</h3>
+          <p>Các dòng trà sữa Thái, hồng trà sữa, matcha latte...</p>
+        </a>
+        <a href="sanpham.html#tra-trai-cay" class="category-card">
+          <h3>Trà trái cây</h3>
+          <p>Trà tắc, trà đào cam thảo, trà chanh mật ong...</p>
+        </a>
+        <a href="sanpham.html#topping" class="category-card">
+          <h3>Topping</h3>
+          <p>Trân châu, pudding, thạch phô mai... kèm theo thoải mái.</p>
+        </a>
+      </div>
+      <!-- Menu image (user provided menu.jpg) -->
+      <div class="menu-image-box">
+        <img src="assets/images/menu.jpg" alt="Menu Oliu Drinks" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SẢN PHẨM NỔI BẬT -->
+  <section class="section fade-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Sản phẩm nổi bật</h2>
+        <p>Một vài món tiêu biểu – toàn bộ menu bạn xem ở trang Sản phẩm.</p>
+      </div>
+
+      <div class="product-toolbar">
+        <div class="product-filters">
+          <button class="filter-btn active" data-filter="all">Tất cả</button>
+          <button class="filter-btn" data-filter="tra-sua">Trà sữa</button>
+          <button class="filter-btn" data-filter="tra-trai-cay">Trà trái cây</button>
+          <button class="filter-btn" data-filter="topping">Topping</button>
+        </div>
+        <form id="product-search-form" class="product-search">
+          <input
+            type="text"
+            id="product-search"
+            placeholder="Tìm tên đồ uống..."
+          />
+          <select id="filter-sort">
+            <option value="default">Sắp xếp</option>
+            <option value="price-asc">Giá tăng dần</option>
+            <option value="price-desc">Giá giảm dần</option>
+            <option value="name-asc">Tên A-Z</option>
+          </select>
+        </form>
+      </div>
+
+      <div id="product-list" class="product-grid">
+        <!-- JS render -->
+      </div>
+
+      <div class="align-center">
+        <a href="sanpham.html" class="btn btn-outline">Xem toàn bộ menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIN NHANH -->
+  <section class="section section-alt fade-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Tin mới từ Oliu Drinks</h2>
+        <p>Các chương trình khuyến mãi và cập nhật cửa hàng.</p>
+      </div>
+      <div class="news-grid">
+        <article class="news-card">
+          <img src="assets/images/sp4.jpg" alt="Tin 1" />
+          <div class="news-body">
+            <h3>Mùa hè bùng vị giác - Giảm 20%</h3>
+            <p>Ưu đãi cho tất cả line trà trái cây trong tháng này.</p>
+            <span class="news-date">01/06/2025</span>
+          </div>
+        </article>
+        <article class="news-card">
+          <img src="assets/images/sp7.jpg" alt="Tin 2" />
+          <div class="news-body">
+            <h3>Ra mắt topping mới</h3>
+            <p>Thạch phô mai hương nhẹ, ăn kèm mọi loại trà sữa.</p>
+            <span class="news-date">25/05/2025</span>
+          </div>
+        </article>
+        <article class="news-card">
+          <img src="assets/images/sp10.jpg" alt="Tin 3" />
+          <div class="news-body">
+            <h3>Mở điểm bán mới tại trung tâm</h3>
+            <p>Không gian rộng rãi, free wifi, phù hợp học tập.</p>
+            <span class="news-date">10/05/2025</span>
+          </div>
+        </article>
+      </div>
+      <div class="align-center">
+        <a href="tintuc.html" class="btn btn-outline">Xem thêm tin tức</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL / COMMUNITY SECTION - Full Width Hero Style -->
+  <section class="social-section fade-section">
+    <div class="social-wrap">
+      <!-- Hero image on left -->
+      <div class="social-hero">
+        <img src="assets/images/a10.jpg" alt="Cộng đồng Oliu Drinks" />
+      </div>
+      <!-- Social grid on right -->
+      <div>
+        <div class="section-header" style="text-align: left; margin-bottom: 16px;">
+          <h2 style="color: var(--primary); font-size: 32px;">Cộng đồng Oliu</h2>
+          <p style="margin-top: 8px;">Hàng ngàn khách hàng yêu thích chia sẻ trải nghiệm với Oliu.</p>
+        </div>
+        <div class="social-grid">
+          <a href="#" class="social-item" style="background-image: url('assets/images/a4.jpg');">
+            <div class="social-overlay">
+              <span class="social-icon">❤️</span>
+            </div>
+          </a>
+          <a href="#" class="social-item" style="background-image: url('assets/images/a5.jpg');">
+            <div class="social-overlay">
+              <span class="social-icon">😍</span>
+            </div>
+          </a>
+          <a href="#" class="social-item" style="background-image: url('assets/images/a6.jpg');">
+            <div class="social-overlay">
+              <span class="social-icon">✨</span>
+            </div>
+          </a>
+          <a href="#" class="social-item" style="background-image: url('assets/images/sp1.jpg');">
+            <div class="social-overlay">
+              <span class="social-icon">🎉</span>
+            </div>
+          </a>
+        </div>
+        <div class="social-cta">
+          <a href="https://www.facebook.com/oliudrinks" target="_blank" class="btn btn-primary">
+            👉 Theo dõi Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STORY SECTION - Collage Layout -->
+  <section class="section section-alt fade-section brand-story">
+    <div class="brand-inner">
+      <!-- Collage on left -->
+      <div class="brand-collage">
+        <img src="assets/images/a7.jpg" alt="Oliu" class="big" />
+        <img src="assets/images/a8.jpg" alt="Oliu" class="med" />
+        <img src="assets/images/a9.jpg" alt="Oliu" class="med" />
+      </div>
+      <!-- Text on right -->
+      <div class="brand-text">
+        <h2>Câu chuyện về Oliu</h2>
+        <p>
+          Oliu Drinks ra đời từ niềm đam mê tạo những thức uống tươi ngon, chất lượng cao. Chúng tôi tin rằng mỗi ly trà 
+          đều là một trải nghiệm đặc biệt - từ việc lựa chọn nguyên liệu tốt nhất, pha chế chuẩn vị, đến cách chúng tôi 
+          phục vụ bạn với tâm huyết. 
+        </p>
+        <p>
+          Hãy ghé thăm để cảm nhận điều đó!
+        </p>
+        <a href="gioithieu.html" class="btn btn-primary">
+          Tìm hiểu thêm
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED CATEGORY CAROUSEL - Full Width Horizontal Row -->
+  <section class="featured-section fade-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Đặc sản của chúng tôi</h2>
+        <p>Những sản phẩm được yêu thích nhất từ khách hàng.</p>
+      </div>
+    </div>
+    <div class="featured-carousel">
+      <div class="carousel-item">
+        <img src="assets/images/sp2.jpg" alt="Trà sữa" />
+        <div class="carousel-info">
+          <h3>Trà Sữa Thái Xanh</h3>
+          <p>25.000đ</p>
+          <button class="btn btn-primary btn-small">Mua ngay</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/sp3.jpg" alt="Trà trái cây" />
+        <div class="carousel-info">
+          <h3>Trà Đào Cam Thảo</h3>
+          <p>22.000đ</p>
+          <button class="btn btn-primary btn-small">Mua ngay</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/sp8.jpg" alt="Trà sữa" />
+        <div class="carousel-info">
+          <h3>Hồng Trà Sữa</h3>
+          <p>24.000đ</p>
+          <button class="btn btn-primary btn-small">Mua ngay</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/sp11.jpg" alt="Đặc biệt" />
+        <div class="carousel-info">
+          <h3>Latte Matcha</h3>
+          <p>28.000đ</p>
+          <button class="btn btn-primary btn-small">Mua ngay</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/sp15.jpg" alt="Trà sữa" />
+        <div class="carousel-info">
+          <h3>Trà Sữa Ô Long</h3>
+          <p>26.000đ</p>
+          <button class="btn btn-primary btn-small">Mua ngay</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/sp12.jpg" alt="Đặc sản" />
+        <div class="carousel-info">
+          <h3>Trà Xanh Chanh</h3>
+          <p>20.000đ</p>
+          <button class="btn btn-primary btn-small">Mua ngay</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="carousel-controls">
+        <button id="carousel-prev" class="carousel-btn">❮</button>
+        <button id="carousel-next" class="carousel-btn">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER sẽ được nạp từ footer.html -->
+  <div id="site-footer"></div>
+
+  <!-- CART SIDEBAR (giữ như cũ) -->
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button id="cart-close" class="cart-close">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng cộng:</span>
+        <span id="cart-total-value">0đ</span>
+      </div>
+      <button id="cart-checkout" class="btn btn-primary btn-full">
+        Thanh toán (demo)
+      </button>
+      <p class="cart-note">
+        * Bản demo – bạn có thể gắn API/backend thật để xử lý đơn.
+      </p>
+    </div>
+  </aside>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/products-ui.js"></script>
+  <script src="assets/js/init.js"></script>
+</body>
+</html>

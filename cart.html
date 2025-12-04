@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oliu Drinks - Giỏ hàng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Modular CSS imports -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/products.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+  <style>
+    .cart-page-hero { background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%); padding: 48px 0; text-align: center; margin-bottom: 32px; }
+    .cart-page-hero h1 { font-size: 42px; font-weight: 900; color: var(--primary-dark); margin-bottom: 12px; }
+    .cart-page-hero p { color: var(--muted); font-size: 16px; }
+    .cart-page-content { display: grid; grid-template-columns: 1fr 350px; gap: 32px; margin-bottom: 32px; }
+    .cart-page-items-wrapper { background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08); }
+    .cart-page-sidebar { background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border-radius: 16px; padding: 24px; height: fit-content; position: sticky; top: 100px; }
+    .cart-page-sidebar h3 { font-size: 20px; font-weight: 700; margin-bottom: 20px; color: var(--primary-dark); }
+    .cart-summary-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e5e7eb; font-size: 14px; }
+    .cart-summary-item.total { font-weight: 900; font-size: 18px; padding-top: 16px; color: var(--primary-dark); }
+    .cart-page-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .cart-page-actions .btn { width: 100%; text-align: center; padding: 12px; }
+    @media (max-width: 860px) { .cart-page-content { grid-template-columns: 1fr; } .cart-page-sidebar { position: static; } }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="promo-bar">
+    <div class="promo-text">
+      KIỂM TRA LẠI ĐƠN HÀNG TRƯỚC KHI THANH TOÁN • MIỄN PHÍ HỦY ĐƠN TRONG 5 PHÚT
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="cart-page-hero fade-section">
+    <div class="container">
+      <h1>🛒 Giỏ hàng của bạn</h1>
+      <p>Kiểm tra và chỉnh sửa đơn hàng trước khi thanh toán</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+      <div class="cart-page-content">
+        <!-- MAIN CART ITEMS -->
+        <div class="cart-page-items-wrapper">
+          <div id="cart-page-items" class="cart-page-items">
+            <!-- JS render -->
+          </div>
+        </div>
+
+        <!-- SIDEBAR SUMMARY -->
+        <div class="cart-page-sidebar">
+          <h3>Tóm tắt đơn hàng</h3>
+          <div class="cart-summary-item">
+            <span>Số lượng:</span>
+            <span id="cart-items-count">0 item</span>
+          </div>
+          <div class="cart-summary-item">
+            <span>Tạm tính:</span>
+            <span id="cart-subtotal">0đ</span>
+          </div>
+          <div class="cart-summary-item">
+            <span>Phí giao:</span>
+            <span>Miễn phí</span>
+          </div>
+          <div class="cart-summary-item total">
+            <span>Tổng cộng:</span>
+            <span id="cart-page-total">0đ</span>
+          </div>
+          <div class="cart-page-actions">
+            <a href="sanpham.html" class="btn btn-outline">← Tiếp tục mua hàng</a>
+            <a href="checkout.html" class="btn btn-primary">Thanh toán →</a>
+          </div>
+          <p style="font-size: 12px; color: var(--muted); margin-top: 16px; text-align: center;">
+            Có thể hủy đơn trong 5 phút nếu thay đổi ý định.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- vẫn dùng sidebar để đồng bộ JS, nhưng bạn có thể bỏ nếu không cần -->
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button id="cart-close" class="cart-close">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng cộng:</span>
+        <span id="cart-total-value">0đ</span>
+      </div>
+      <button id="cart-checkout" class="btn btn-primary btn-full">
+        Thanh toán (demo)
+      </button>
+      <p class="cart-note">
+        * Trang cart riêng đã có nút sang trang thanh toán.
+      </p>
+    </div>
+  </aside>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/products-ui.js"></script>
+  <script src="assets/js/init.js"></script>
+</body>
+</html>

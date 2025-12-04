@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oliu Drinks - Sản phẩm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/products.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="promo-bar">
+    <div class="promo-text">
+      GIẢM 10% CHO TRÀ SỮA THÁI XANH &nbsp;•&nbsp; MUA 4 TẶNG 1 TOPPING
+      &nbsp;•&nbsp; FREESHIP ĐƠN TỪ 80.000đ
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); text-align: center; padding: 48px 0; margin-bottom: 32px;" class="fade-section">
+    <div class="container">
+      <h1 style="font-size: 42px; font-weight: 900; color: var(--primary-dark); margin-bottom: 12px;">☕ Menu sản phẩm</h1>
+      <p style="color: var(--muted); font-size: 16px;">Chọn từ 3 nhóm: Trà sữa, Trà trái cây và Topping</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+      <div class="product-toolbar fade-section">
+        <div class="product-filters">
+          <button class="filter-btn active" data-filter="all">Tất cả</button>
+          <button class="filter-btn" data-filter="tra-sua">Trà sữa</button>
+          <button class="filter-btn" data-filter="tra-trai-cay">Trà trái cây</button>
+          <button class="filter-btn" data-filter="topping">Topping</button>
+        </div>
+        <form id="product-search-form" class="product-search">
+          <input
+            type="text"
+            id="product-search"
+            placeholder="Tìm kiếm tên đồ uống..."
+          />
+          <select id="filter-sort">
+            <option value="default">Sắp xếp</option>
+            <option value="price-asc">Giá tăng dần</option>
+            <option value="price-desc">Giá giảm dần</option>
+            <option value="name-asc">Tên A-Z</option>
+          </select>
+        </form>
+      </div>
+
+      <div id="product-list" class="product-grid">
+        <!-- JS render -->
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button id="cart-close" class="cart-close">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng cộng:</span>
+        <span id="cart-total-value">0đ</span>
+      </div>
+      <button id="cart-checkout" class="btn btn-primary btn-full">
+        Thanh toán (demo)
+      </button>
+      <p class="cart-note">
+        * Bản demo – bạn có thể dùng phần này để gửi đơn đặt hàng thật lên server.
+      </p>
+    </div>
+  </aside>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/products-ui.js"></script>
+  <script src="assets/js/init.js"></script>
+</body>
+</html>

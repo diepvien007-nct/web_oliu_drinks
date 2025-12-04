@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oliu Drinks - Thanh toán</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="promo-bar">
+    <div class="promo-text">
+      THANH TOÁN ĐƠN GIẢN • BẠN CÓ THỂ TÍCH HỢP VNPAY / MOMO / COD SAU NÀY
+    </div>
+  </div>
+
+  <main class="section section-alt">
+    <div class="container checkout-page fade-section">
+      <div class="checkout-left">
+        <h2>Thông tin giao hàng</h2>
+        <form id="checkout-form" class="checkout-form">
+          <input type="text" placeholder="Họ tên người nhận" required />
+          <input type="tel" placeholder="Số điện thoại" required />
+          <input type="text" placeholder="Địa chỉ giao hàng" required />
+          <input type="text" placeholder="Ghi chú thêm (tuỳ chọn)" />
+
+          <h3>Phương thức thanh toán</h3>
+          <label class="checkout-radio">
+            <input type="radio" name="payment" value="cod" checked />
+            <span>Thanh toán khi nhận hàng (COD)</span>
+          </label>
+          <label class="checkout-radio">
+            <input type="radio" name="payment" value="online" />
+            <span>Chuyển khoản / thanh toán online (demo)</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Xác nhận đặt hàng (demo)
+          </button>
+          <p class="checkout-note">
+            * Hiện chỉ là bản mô phỏng. Khi làm backend bạn sẽ gửi dữ liệu này
+            lên server, tạo đơn và xử lý thanh toán.
+          </p>
+        </form>
+      </div>
+
+      <div class="checkout-right">
+        <h2>Đơn hàng của bạn</h2>
+        <div id="checkout-summary" class="checkout-summary">
+          <!-- JS render -->
+        </div>
+        <div class="checkout-total-box">
+          <span>Tổng cộng:</span>
+          <span id="checkout-total">0đ</span>
+        </div>
+        <a href="cart.html" class="checkout-back-link">Quay lại giỏ hàng</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button id="cart-close" class="cart-close">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng cộng:</span>
+        <span id="cart-total-value">0đ</span>
+      </div>
+      <button id="cart-checkout" class="btn btn-primary btn-full">
+        Thanh toán (demo)
+      </button>
+      <p class="cart-note">
+        * Bạn đang ở trang thanh toán – sidebar chủ yếu để xem nhanh thôi.
+      </p>
+    </div>
+  </aside>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/products-ui.js"></script>
+  <script src="assets/js/init.js"></script>
+</body>
+</html>

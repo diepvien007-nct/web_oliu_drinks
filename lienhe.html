@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oliu Drinks - Liên hệ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/products.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+  <style>
+    .contact-grid-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 48px;
+      align-items: flex-start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-card {
+      padding: 20px;
+      background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      aspect-ratio: 1 / 1;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .contact-form-section {
+      background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form-section h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(24, 166, 74, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    @media (max-width: 860px) {
+      .contact-grid-main {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .contact-form-section {
+        max-width: 100%;
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="promo-bar">
+    <div class="promo-text">
+      LIÊN HỆ NGAY - CHÚNG TÔI SẼ GIÚP BẠN!
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); text-align: center; padding: 48px 0; margin-bottom: 32px;" class="fade-section">
+    <div class="container">
+      <h1 style="font-size: 42px; font-weight: 900; color: var(--primary-dark); margin-bottom: 12px;">📞 Liên hệ với chúng tôi</h1>
+      <p style="color: var(--muted); font-size: 16px;">Hãy để lại thông tin để chúng tôi có thể hỗ trợ bạn tốt nhất</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+      <!-- CONTACT INFO + GALLERY GRID -->
+      <div class="contact-grid-main">
+        <!-- LEFT: CONTACT INFO CARDS -->
+        <div class="contact-info">
+          <div class="contact-card fade-section">
+            <h4>📍 Địa chỉ</h4>
+            <p>
+              Oliu Drinks - Chi nhánh 1<br />
+              123 Đường Nguyễn Huệ<br />
+              Quận 1, TP. Hồ Chí Minh
+            </p>
+          </div>
+
+          <div class="contact-card fade-section">
+            <h4>📱 Điện thoại</h4>
+            <p>
+              <a href="tel:0898765432">0898.765.432</a><br />
+              <small>Các giờ làm việc: 7:30 - 21:30</small>
+            </p>
+          </div>
+
+          <div class="contact-card fade-section">
+            <h4>✉️ Email</h4>
+            <p>
+              <a href="mailto:info@oliudrinks.com">info@oliudrinks.com</a><br />
+              <a href="mailto:support@oliudrinks.com">support@oliudrinks.com</a>
+            </p>
+          </div>
+
+          <div class="contact-card fade-section">
+            <h4>🕐 Giờ mở cửa</h4>
+            <p>
+              Thứ 2 - Thứ 6: 07:30 - 21:30<br />
+              Thứ 7 - Chủ nhật: 08:00 - 22:00<br />
+              <small>Vẫn hoạt động vào các ngày lễ</small>
+            </p>
+          </div>
+
+          <div class="contact-card fade-section">
+            <h4>🌐 Mạng xã hội</h4>
+            <p>
+              <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">TikTok</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: IMAGE GALLERY -->
+        <div class="image-gallery fade-section">
+          <div class="gallery-item">
+            <img src="assets/images/s1.jpg" alt="Oliu Drinks - Không gian 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/s2.jpg" alt="Oliu Drinks - Không gian 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/s3.jpg" alt="Oliu Drinks - Không gian 3" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/menu.jpg" alt="Menu Oliu Drinks" />
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form-section fade-section">
+        <h3>Gửi thông tin cho chúng tôi</h3>
+        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label for="name">Tên của bạn *</label>
+            <input type="text" id="name" name="name" required placeholder="Nhập tên" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" name="phone" placeholder="0898 765 432" />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Vấn đề *</label>
+            <select id="subject" name="subject" required>
+              <option value="">-- Chọn vấn đề --</option>
+              <option value="feedback">Phản hồi / Góp ý</option>
+              <option value="complaint">Khiếu nại dịch vụ</option>
+              <option value="partnership">Hợp tác kinh doanh</option>
+              <option value="job">Ứng tuyển việc làm</option>
+              <option value="other">Khác</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Nội dung *</label>
+            <textarea id="message" name="message" required placeholder="Vui lòng nhập nội dung của bạn..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Gửi thông tin
+          </button>
+          <p style="font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center;">
+            * Bản demo – biểu mẫu này không lưu dữ liệu thực tế
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button id="cart-close" class="cart-close">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng cộng:</span>
+        <span id="cart-total-value">0đ</span>
+      </div>
+      <button id="cart-checkout" class="btn btn-primary btn-full">
+        Thanh toán (demo)
+      </button>
+      <p class="cart-note">
+        * Bản demo – phần này dùng để xử lý thanh toán / xác nhận đơn hàng.
+      </p>
+    </div>
+  </aside>
+
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      alert('Cảm ơn bạn đã gửi thông tin! (Demo - Thông tin không được lưu)');
+      document.getElementById('contact-form').reset();
+    }
+  </script>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/products-ui.js"></script>
+  <script src="assets/js/init.js"></script>
+</body>
+</html>

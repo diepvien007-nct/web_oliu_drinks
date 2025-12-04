@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oliu Drinks - Đăng ký</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+  <style>
+    .auth-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e6fbec, #f5fff8);
+      padding: 20px;
+    }
+    .auth-box {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+      padding: 48px;
+      width: 100%;
+      max-width: 500px;
+    }
+    .auth-box h1 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+    .auth-box p {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-size: 14px;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #111827;
+      font-size: 14px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(24, 166, 74, 0.1);
+    }
+    .auth-button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, var(--primary), #16a34a);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 28px rgba(24, 166, 74, 0.2);
+    }
+    .auth-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(24, 166, 74, 0.3);
+    }
+    .auth-button:active {
+      transform: translateY(0);
+    }
+    .auth-link {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .auth-link a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .auth-link a:hover {
+      text-decoration: underline;
+    }
+    .error-msg {
+      background: #fee2e2;
+      color: #dc2626;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      display: none;
+    }
+    .success-msg {
+      background: #dcfce7;
+      color: #16a34a;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <h1>Đăng ký</h1>
+      <p>Tạo tài khoản mới để bắt đầu</p>
+
+      <div id="error-msg" class="error-msg"></div>
+      <div id="success-msg" class="success-msg"></div>
+
+      <form id="register-form">
+        <div class="form-group">
+          <label for="reg-fullname">Họ và tên *</label>
+          <input type="text" id="reg-fullname" placeholder="Nguyễn Văn A" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="reg-email">Email *</label>
+          <input type="email" id="reg-email" placeholder="your@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-phone">Số điện thoại *</label>
+          <input type="tel" id="reg-phone" placeholder="0912345678" required />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-address">Địa chỉ *</label>
+          <input type="text" id="reg-address" placeholder="123 Đường ABC, Q1, TP.HCM" required />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-password">Mật khẩu *</label>
+          <input type="password" id="reg-password" placeholder="••••••••" required />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-confirm-password">Xác nhận mật khẩu *</label>
+          <input type="password" id="reg-confirm-password" placeholder="••••••••" required />
+        </div>
+
+        <button type="submit" class="auth-button">Đăng ký</button>
+      </form>
+
+      <div class="auth-link">
+        Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a>
+      </div>
+      <div class="auth-link">
+        <a href="index.html">← Quay lại trang chủ</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/user.js"></script>
+  <script src="assets/js/init.js"></script>
+  <script>
+    document.getElementById('register-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const fullName = document.getElementById('reg-fullname').value.trim();
+      const email = document.getElementById('reg-email').value.trim();
+      const phone = document.getElementById('reg-phone').value.trim();
+      const address = document.getElementById('reg-address').value.trim();
+      const password = document.getElementById('reg-password').value.trim();
+      const confirmPassword = document.getElementById('reg-confirm-password').value.trim();
+      
+      const errorEl = document.getElementById('error-msg');
+      const successEl = document.getElementById('success-msg');
+
+      errorEl.style.display = 'none';
+      successEl.style.display = 'none';
+
+      // Validation
+      if (!fullName || !email || !phone || !address || !password || !confirmPassword) {
+        errorEl.textContent = 'Vui lòng nhập đầy đủ tất cả các trường.';
+        errorEl.style.display = 'block';
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        errorEl.textContent = 'Mật khẩu không khớp. Vui lòng kiểm tra lại.';
+        errorEl.style.display = 'block';
+        return;
+      }
+
+      if (password.length < 6) {
+        errorEl.textContent = 'Mật khẩu phải có ít nhất 6 ký tự.';
+        errorEl.style.display = 'block';
+        return;
+      }
+
+      // Register user
+      const result = registerUser(email, password, fullName, phone, address);
+      
+      if (result.success) {
+        successEl.textContent = 'Đăng ký thành công! Đang chuyển hướng tới trang đăng nhập...';
+        successEl.style.display = 'block';
+        setTimeout(() => {
+          window.location.href = 'login.html?email=' + encodeURIComponent(email);
+        }, 2000);
+      } else {
+        errorEl.textContent = result.message;
+        errorEl.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

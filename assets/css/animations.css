@@ -1,0 +1,632 @@
+/* ====================
+   ANIMATIONS - Transitions and scroll animations
+   ==================== */
+
+/* Fade-in on scroll */
+.fade-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+/* No transition on certain elements */
+img,
+video,
+canvas,
+svg {
+  transition: none !important;
+}
+
+/* News grid */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.news-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.15);
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-body {
+  padding: 16px;
+}
+
+.news-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.news-body p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.news-date {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Loading state */
+.is-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Success/error messages */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #10b981;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.3);
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 9999;
+  animation: slideInUp 0.3s ease;
+}
+
+.toast.error {
+  background: #ef4444;
+  box-shadow: 0 12px 28px rgba(239, 68, 68, 0.3);
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Product detail page animations */
+.product-detail {
+  animation: fadeIn 0.4s ease;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.detail-image img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.detail-body h2.detail-name {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.detail-body .detail-desc {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.option-group {
+  margin-bottom: 16px;
+}
+
+.option-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.topping-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topping-item {
+  font-size: 13px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1.5px solid #e5e7eb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topping-item:hover {
+  border-color: var(--primary);
+}
+
+.topping-item.selected {
+  background: #ecfdf5;
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.detail-qty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.qty-btn {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  border-color: var(--primary);
+}
+
+.qty-value {
+  min-width: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.detail-total {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--primary-dark);
+  margin-top: 12px;
+}
+
+.cart-opt {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+@media (max-width: 860px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-body h2.detail-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toast {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+  }
+}
+
+/* Social - full width hero style */
+.social-section {
+  background: linear-gradient(135deg, #f7fff6, #f0fdf4);
+  padding: 48px 0;
+  margin: 0 !important;
+}
+
+.social-wrap {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.social-hero {
+  flex: 1.2 1 0;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.12);
+  min-height: 380px;
+}
+
+.social-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.social-grid {
+  flex: 0.8 1 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.social-item {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 170px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.social-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.05));
+  pointer-events: none;
+}
+
+.social-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 166, 74, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-item:hover .social-overlay {
+  opacity: 1;
+}
+
+.social-icon {
+  font-size: 36px;
+}
+
+.social-cta {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-cta .btn {
+  margin: 0 auto;
+}
+
+/* Brand Story Section - Collage Layout */
+.brand-story {
+  background: linear-gradient(135deg, #fffef8, #f9fff6);
+}
+
+.brand-inner {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.brand-collage {
+  flex: 0.55 1 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  min-height: 420px;
+}
+
+.brand-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.brand-collage .big {
+  grid-column: 1 / -1;
+  height: 200px;
+}
+
+.brand-collage .med {
+  height: 180px;
+}
+
+.brand-text {
+  flex: 0.45 1 0;
+  padding: 12px;
+}
+
+.brand-text h2 {
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--primary-dark);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.brand-text p {
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.brand-text .btn {
+  display: inline-block;
+}
+
+/* Featured Carousel - Single Horizontal Row */
+.featured-section {
+  padding: 32px 0;
+}
+
+.featured-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 12px 6px;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
+}
+
+.featured-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.featured-carousel::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.featured-carousel::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+.carousel-item {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 240px;
+  scroll-snap-align: start;
+}
+
+.carousel-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.15);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.carousel-info {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-info h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--text);
+}
+
+.carousel-info p {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--primary-dark);
+  margin: 0 0 12px;
+}
+
+.btn-small {
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+  width: 100%;
+  margin-top: auto;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .social-wrap {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .social-hero {
+    min-height: 280px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .social-item {
+    min-height: 130px;
+  }
+
+  .brand-inner {
+    flex-direction: column;
+    gap: 20px;
+    padding: 28px 20px;
+  }
+
+  .brand-collage {
+    flex: 1;
+    grid-template-columns: 1fr 1fr;
+    min-height: 300px;
+  }
+
+  .brand-collage .big {
+    height: 140px;
+  }
+
+  .brand-collage .med {
+    height: 130px;
+  }
+
+  .brand-text {
+    flex: 1;
+    padding: 0;
+  }
+
+  .brand-text h2 {
+    font-size: 28px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-item {
+    width: 200px;
+  }
+
+  .carousel-item img {
+    height: 150px;
+  }
+
+  .toast {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .social-wrap {
+    flex-direction: column;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-item {
+    min-height: 160px;
+  }
+
+  .brand-collage {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .brand-collage .big {
+    height: 160px;
+  }
+
+  .brand-collage .med {
+    display: none;
+  }
+
+  .brand-text h2 {
+    font-size: 22px;
+  }
+
+  .carousel-item {
+    width: 160px;
+  }
+
+  .carousel-item img {
+    height: 120px;
+  }
+
+  .carousel-controls {
+    gap: 8px;
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}

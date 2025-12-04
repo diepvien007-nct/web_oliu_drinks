@@ -1,0 +1,31 @@
+// products.js - product data (global)
+var products = [
+  { id: 1, name: "Trà sữa Thái xanh", price: 25000, category: "tra-sua", image: "assets/images/a1.jpg", description: "Trà xanh béo thơm, màu xanh bắt mắt.", tag: "Trà sữa" },
+  { id: 2, name: "Hồng trà sữa", price: 22000, category: "tra-sua", image: "assets/images/a2.jpg", description: "Hồng trà đậm vị, cân bằng giữa trà và sữa.", tag: "Trà sữa" },
+  { id: 3, name: "Matcha Latte", price: 29000, category: "tra-sua", image: "assets/images/a3.jpg", description: "Matcha Nhật kết hợp sữa tươi, ngọt vừa, thơm lâu.", tag: "Matcha" },
+  { id: 4, name: "Trà sữa Socola", price: 27000, category: "tra-sua", image: "assets/images/a4.jpg", description: "Socola béo ngậy, hợp với ai thích vị đậm.", tag: "Hot" },
+  { id: 5, name: "Trà sữa Trân châu", price: 30000, category: "tra-sua", image: "assets/images/a5.jpg", description: "Trà sữa truyền thống kèm trân châu dai.", tag: "Best seller" },
+  { id: 6, name: "Trà sữa Bạc hà", price: 26000, category: "tra-sua", image: "assets/images/a6.jpg", description: "Hương bạc hà tươi mát, vị lạ miệng.", tag: "Mới" },
+  { id: 7, name: "Trà sữa Caramel", price: 28000, category: "tra-sua", image: "assets/images/a7.jpg", description: "Caramel ngọt dịu, thơm vị đường cháy.", tag: "Trà sữa" },
+  { id: 8, name: "Trà sữa Khoai môn", price: 32000, category: "tra-sua", image: "assets/images/a8.jpg", description: "Khoai môn béo, vị đặc trưng, rất thích hợp cho ai mê vị ngọt.", tag: "Đặc sắc" },
+  { id: 9, name: "Trà sữa Oolong", price: 30000, category: "tra-sua", image: "assets/images/a9.jpg", description: "Oolong nhẹ, hòa quyện với sữa tươi.", tag: "Trà sữa" },
+  { id: 10, name: "Trà sữa Dâu", price: 29000, category: "tra-sua", image: "assets/images/a10.jpg", description: "Vị dâu ngọt nhẹ, màu sắc bắt mắt.", tag: "Mùa hè" },
+
+  { id: 11, name: "Trà tắc Thái xanh", price: 19000, category: "tra-trai-cay", image: "assets/images/a11.jpg", description: "Vị chua ngọt, thơm mùi tắc, uống siêu đã khát.", tag: "Best seller" },
+  { id: 12, name: "Trà đào cam thảo", price: 25000, category: "tra-trai-cay", image: "assets/images/a12.jpg", description: "Đào miếng, cam thảo thơm, hậu vị ngọt nhẹ.", tag: "Trà đào" },
+  { id: 13, name: "Trà chanh mật ong", price: 23000, category: "tra-trai-cay", image: "assets/images/a13.jpg", description: "Chanh tươi, mật ong, vị thanh mát dễ uống.", tag: "Refreshing" },
+  { id: 14, name: "Trà việt quất", price: 24000, category: "tra-trai-cay", image: "assets/images/a14.jpg", description: "Việt quất tươi, vị chua nhẹ, rất dễ uống.", tag: "Trà trái cây" },
+  { id: 15, name: "Trà xoài", price: 26000, category: "tra-trai-cay", image: "assets/images/a15.jpg", description: "Xoài chín mềm, ngọt thanh, thơm mùi trái cây.", tag: "Mùa vụ" },
+  { id: 16, name: "Trà cóc", price: 20000, category: "tra-trai-cay", image: "assets/images/a16.jpg", description: "Cóc chua nhẹ, phù hợp khi muốn giải khát.", tag: "Giảm nhiệt" },
+  { id: 17, name: "Trà sả chanh", price: 21000, category: "tra-trai-cay", image: "assets/images/a17.jpg", description: "Sả thơm, chanh tươi tạo cảm giác sảng khoái.", tag: "Tươi mát" },
+
+  { id: 18, name: "Trân châu đường đen", price: 6000, category: "topping", image: "assets/images/tp1.jpg", description: "Trân châu dai mềm, áo đường đen thơm.", tag: "Topping" },
+  { id: 19, name: "Thạch phô mai", price: 7000, category: "topping", image: "assets/images/tp2.jpg", description: "Viên phô mai béo nhẹ, ăn rất ghiền.", tag: "Topping" },
+  { id: 20, name: "Pudding trứng", price: 7000, category: "topping", image: "assets/images/tp3.jpg", description: "Pudding trứng mềm mịn, thơm trứng sữa.", tag: "Topping" },
+  { id: 21, name: "Kem phô mai", price: 8000, category: "topping", image: "assets/images/tp4.jpg", description: "Kem phô mai béo mịn, tăng độ ngon cho đồ uống.", tag: "Topping" },
+  { id: 22, name: "Rau câu trái cây", price: 6000, category: "topping", image: "assets/images/tp5.jpg", description: "Mềm mịn, vị trái cây tự nhiên.", tag: "Topping" },
+  { id: 23, name: "Hạt chia", price: 5000, category: "topping", image: "assets/images/tp6.jpg", description: "Bổ sung dinh dưỡng, giòn nhẹ khi nhai.", tag: "Topping" },
+  { id: 24, name: "Trân châu trắng", price: 6000, category: "topping", image: "assets/images/tp7.jpg", description: "Trân châu dai, màu trắng trong suốt.", tag: "Topping" },
+  { id: 25, name: "Thạch dừa", price: 7000, category: "topping", image: "assets/images/tp8.jpg", description: "Thạch dừa giòn, thơm mùi nước cốt dừa.", tag: "Topping" },
+  { id: 26, name: "Bánh flan", price: 9000, category: "topping", image: "assets/images/tp9.jpg", description: "Bánh flan béo, mềm, rất hợp khi thêm vào trà sữa.", tag: "Topping" },
+];
